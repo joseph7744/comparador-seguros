@@ -1,0 +1,14 @@
+{
+  "marcas": [
+    { "id": 1, "nome": "Toyota", "origem": "Japão" },
+    { "id": 2, "nome": "Volkswagen", "origem": "Alemanha" }
+  ],
+  "modelos": [
+    { "id": 1, "marcaId": 1, "nome": "Corolla", "ano": 2024 },
+    { "id": 2, "marcaId": 2, "nome": "Golf", "ano": 2023 }
+  ],
+  "seguradoras": [
+    { "id": 1, "nome": "Porto Seguro", "imagem": "porto.png", "nota": 4.8 },
+    { "id": 2, "nome": "Allianz", "imagem": "allianz.png", "nota": 4.5 }
+  ]
+}
