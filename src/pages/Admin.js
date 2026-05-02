@@ -121,8 +121,8 @@ const Admin = ({ dados, setDados }) => {
               >
                 <option value="">Selecione a marca</option>
                 {dados.marcas.map((marca) => (
-                  <option key={marca} value={marca}>
-                    {marca}
+                  <option key={marca.id} value={marca.nome}>
+                    {marca.nome}
                   </option>
                 ))}
               </select>

@@ -18,10 +18,19 @@ const Principal = () => {
         return response.json();
       })
       .then((data) => {
+        const marcas = data.marcas || [];
+        const modelos = (data.modelos || []).map((modelo) => ({
+          ...modelo,
+          marca:
+            marcas.find((marca) => marca.id === modelo.marcaId)?.nome ||
+            modelo.marca ||
+            '',
+        }));
+
         setDados({
-          marcas: data.marca || [],
-          modelos: data.modelo || [],
-          seguradoras: data.seguradora || [],
+          marcas,
+          modelos,
+          seguradoras: data.seguradoras || [],
         });
         setLoading(false);
       })

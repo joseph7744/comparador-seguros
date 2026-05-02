@@ -31,8 +31,8 @@ const Comparar = ({ dados }) => {
           >
             <option value="">Selecione uma marca</option>
             {dados.marcas.map((marca) => (
-              <option key={marca} value={marca}>
-                {marca}
+              <option key={marca.id} value={marca.nome}>
+                {marca.nome}
               </option>
             ))}
           </select>
